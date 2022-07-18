@@ -1,0 +1,369 @@
+@import components/mixin
+
+body,
+html
+    scroll-behavior: smooth
+body
+    background-color: #f5f8fa
+header
+    background-image: url(../img/header_background.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center bottom
+hr
+    border-color: #dfe3e6
+.text_primary
+    color: #0099ff !important
+.nav_a
+    &:hover
+        color: #ffcb3f !important
+.p_container
+    &:before
+        content: ""
+        position: absolute
+        border: 4px solid #fff
+        width: 370px
+        left: 50%
+        transform: translate(-50%)
+        opacity: 20%
+        +max-width(375)
+            width: 300px
+        +max-width(320)
+            width: 250px
+    &:before
+        border-bottom: 0
+        height: 40px
+        top: 0
+    // &:after
+    //     border-top: 0
+    //     height: 95px
+    //     bottom: -40px
+
+.p_p_container
+    &:before
+        content: ""
+        position: absolute
+        border: 4px solid #fff
+        width: 370px
+        left: 50%
+        transform: translate(-50%)
+        opacity: 20%
+        +max-width(375)
+            width: 300px
+        +max-width(320)
+            width: 250px
+    &:before
+        border-top: 0
+        height: 95px
+        bottom: -50px
+
+
+.yellow_btn
+    border-radius: 30px
+    padding: 10px 35px !important
+.header_a
+    font-size: 14px
+.sea_p
+    font-size: 72px !important
+    +max-width(420)
+        font-size: 40px !important
+    +max-width(320)
+        font-size: 30px !important
+.pointer_a
+    &:before, &:after
+        content: ""
+        position: absolute
+        border: 2px solid #000
+        border-bottom: 0
+        border-right: 0
+        width: 18px
+        height: 18px
+        transform: rotate(-135deg)
+    &:before
+        top: 0
+    &:after
+        top: 10px
+
+.see_all_plans
+    transition: 0.3s all ease
+    text-decoration: none
+    &:before
+        content: ""
+        position: absolute
+        top: 5px
+        right: -20px
+        height: 12px
+        width: 12px
+        border: 1px solid #0099ff
+        border-radius: 50%
+        transition: 0.3s all ease
+    &:after
+        content: ""
+        position: absolute
+        top: 9px
+        right: -16px
+        height: 4px
+        width: 4px
+        border: 1px solid #0099ff
+        border-right: 0
+        border-bottom: 0
+        transform: rotate(135deg)
+        transition: 0.3s all ease
+    &:hover
+        color:#ffcb3f !important
+        &:before
+            border-color: #ffcb3f !important
+        &:after
+            border-color: #ffcb3f !important
+.main_card_col
+    transition: 0.3s all ease
+    &:hover
+        background-color: #fff
+        box-shadow: 0px 4px 10.5px rgba(3,20,31,0.05)
+.island_price
+    background-color: #edf2f5
+.blue-button
+    border-color: #0099ff
+    margin-left: 10px !important
+    &:hover
+        border-color: #ffb700
+        color: #ffb700 !important
+.island_img
+    height: 270px !important
+.main_bgi
+    background-image: url(../img/main_background.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center bottom
+.bg_col_1
+    padding-right: 100px !important
+.main_bgi_col_2
+    &:before, &:after
+        position: absolute
+        content: ""
+        border: 4px solid #ffffff
+        opacity: 20%
+        width: 200px
+        height: 270px
+        // height: 235px
+        +max-width(1024)
+            width: 150px
+            height: 320px
+        +max-width(768)
+            width: 80px
+            height: 370px
+        +max-width(425)
+            height: 350px
+        +max-width(375)
+            height: 370px
+        +max-width(320)
+            height: 470px
+            width: 50px
+    &:before
+        top: 0
+        left: -20px
+        border-right: 0
+        +max-width(768)
+            left: -30px
+        +max-width(425)
+            left: 0
+    &:after
+        top: 0
+        right: 10px
+        border-left: 0
+.main_col_2_div
+    padding-right: 50px
+    +max-width(425)
+        padding-left: 50px
+    &:before, &:after
+        position: absolute
+        content: ""
+    &:before
+        top: -60px
+        left: 50%
+        width: 45px
+        height: 45px
+        background-image: url(../img/Forma_1.png)
+        background-repeat: no-repeat
+        transform: translate(-100%)
+        +max-width(375)
+            transform: translate(-70%)
+    &:after
+        bottom: -100px
+        left: 50%
+        width: 120px
+        height: 100px
+        background-image: url(../img/Ellipse_1.png)
+        background-repeat: no-repeat
+        transform: translate(-70%)
+        +max-width(375)
+            transform: translate(-50%)
+.trip_card_div
+    transition: 0.3s all ease
+    width: 271px !important
+    height: 100% !important
+    +max-width(425)
+        margin-left: 60px
+    +max-width(320)
+        margin-left: 15px
+    &:hover
+        background-color: #fff
+        box-shadow: 0px 4px 10.5px rgba(3,20,31,0.05)
+.zamovity
+    text-decoration: none
+    color: #ffb700
+    vertical-align: sub !important
+    &:hover
+        &:before,&:after
+            border-color: #0a58ca
+    &:before
+        content: ""
+        position: absolute
+        top: 5px
+        right: -20px
+        height: 12px
+        width: 12px
+        border: 1px solid #ffb700
+        border-radius: 50%
+    &:after
+        content: ""
+        position: absolute
+        top: 9px
+        right: -16px
+        height: 4px
+        width: 4px
+        border: 1px solid #ffb700
+        border-right: 0
+        border-bottom: 0
+        transform: rotate(135deg)
+.col_info
+    width: 271px !important
+    height: 336px !important
+.col_info_2
+    background-image: url(../img/Rectangle_25.png)
+    background-repeat: no-repeat
+    background-size: cover
+.col_info_3
+    background-image: url(../img/Rectangle_25_1.png)
+    background-repeat: no-repeat
+    background-size: cover
+.yellow_border_btn
+    border-color: #ffb700
+    color: #ffb700 !important
+    margin-left: 0 !important
+    padding: 0 19px !important
+    padding-left: 30px !important
+    font-size: 12px !important
+    &:before
+        content: ""
+        position: absolute
+        top: 3px
+        left: 8px
+        width: 16px
+        height: 12px
+        background-image: url(../img/cloud.png)
+        background-repeat: no-repeat
+    &:hover
+        border-color: #0099ff
+        // color: #0099ff !important
+.right_text_p
+    padding-left: 50px
+    &:before
+        content: ""
+        position: absolute
+        top: 10px
+        left: 0
+        width: 35px
+        height: 43px
+        background-image: url(../img/file.png)
+        background-repeat: no-repeat
+.tel_a
+    text-decoration: none
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: -25px
+        width: 18px
+        height: 18px
+        background-image: url(../img/phone.png)
+        background-repeat: no-repeat
+    &:hover
+        text-decoration: underline
+.col_info_4
+    +max-width(1024)
+        width: 240px !important
+    +max-width(768)
+        width: 270px !important
+    &:before, &:after
+        content: ""
+        position: absolute
+        border: 4px solid #ffb700
+        height: 310px
+        width: 48px
+        top: 17px
+    &:before
+        left: -15px
+        border-right: 0
+    &:after
+        right: -15px
+        border-left: 0
+.div_for_ellipse
+    &:before
+        content: ""
+        position: absolute
+        height: 100px
+        width: 120px
+        left: 50%
+        bottom: -100px
+        background-image: url(../img/Ellipse_2.png)
+        background-repeat: no-repeat
+        transform: translate(-50%)
+.footer_bgi
+        background-image: url(../img/footer_background.png)
+        background-repeat: no-repeat
+        background-size: cover
+.s_t
+    position: absolute
+    top: 0
+    left: 0
+    width: 62px
+    height: 62px
+.blue_rect_bike
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 61px
+        height: 190px
+        background-image: url(../img/blue_rect_bike.png)
+        background-repeat: no-repeat
+.mw_500
+    max-width: 500px
+.col_info_1
+    +max-width(1024)
+        width: 500px !important
+        height: 100px !important
+    +max-width(425)
+        width: 400px !important
+    +max-width(375)
+        width: 300px !important
+        margin-left: 30px
+    +max-width(320)
+        width: 230px !important
+        margin-left: 30px
+    +max-width(416)
+        width: 230px !important
+        margin-left: 60px
+.cards_col
+    +max-width(425)
+        margin: 0 50px
+.m_cols
+    +max-width(425)
+        margin: 10px 50px
+    +max-width(320)
+        margin: 10px 15px
+
+.about
+    margin-left: 0 !important

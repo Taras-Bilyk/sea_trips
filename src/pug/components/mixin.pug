@@ -1,0 +1,127 @@
+- 
+    let mainMenu = [
+        {
+            name: "Гoловна",
+            url: "#"
+        },
+        {
+            name: "послуги",
+            url: "#"
+        },
+        {
+            name: "про компанію",
+            url: "#"
+        },
+        {
+            name: "Акції",
+            url: "#"
+        },
+        {
+            name: "Партнери",
+            url: "#"
+        },
+        {
+            name: "відгуки",
+            url: "#"
+        },
+        {
+            name: "Контакти",
+            url: "#"
+        }
+    ]
+
+-
+    let cards = {
+        bike: {
+            src: "img/bike",
+            alt: "sea trips",
+            title: "Тур на велосипедах",
+            price: "355",
+            description: "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.",
+        },
+        trip: {
+            src: "img/circle",
+            alt: "sea trips",
+            title: "Екскурсія на острів",
+            price: "500",
+            description: "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .",
+        },
+        exclusive: {
+            src: "img/messenge",
+            alt: "sea trips",
+            title: "Особливе замовлення",
+            price: "250",
+            description: "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші. ",
+        }
+    }
+
+
+-
+    let trip_cards = {
+        trip_to_2: {
+            src: "img/photo1",
+            alt: "sea trips подорож на 2",
+            title: "Романтична подорож на 2",
+            price: "2599",
+            description: "Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи.",
+        },
+        bike: {
+            src: "img/photo2",
+            alt: "sea trips Велотур",
+            title: "Велотур",
+            price: "555",
+            description: "Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!",
+        },
+        on_island: {
+            src: "img/photo3",
+            alt: "sea trips На острови!",
+            title: "На острови!",
+            price: "1559",
+            description: "Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!",
+        },
+        serfing: {
+            src: "img/photo4",
+            alt: "sea trips Катання на сьорфінгу",
+            title: "Катання на сьорфінгу",
+            price: "999",
+            description: "Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!",
+        }
+    }
+
+
+mixin menu (items)
+    for item in items
+        //- a(href=item.url) #{item.name}
+        a(href=item.url).nav-link.text-white.nav_a.text-uppercase.header_a #{item.name}
+
+mixin card (item)
+    figure 
+        figcaption
+            .text-center.mb-4
+                picture
+                    source(srcset=item.src + ".webp", type="image/webp")
+                    img(src=item.src + ".png", alt=item.alt)
+            p.title-card.text-center.fs-5.mb-2 #{item.title}
+            p.price.text-center.text_primary.fs-3.mb-2 #{item.price}<span> грн.*</span> 
+            p.card-deskr.text-secondary #{item.description}
+
+mixin trip_card (item)
+    figure 
+        figcaption
+            picture
+                source(srcset=item.src + ".webp", type="image/webp")
+                img(src=item.src + ".png", alt=item.alt)
+            .p-3
+                p.fs-6.mb-2 #{item.title}
+                p.text-secondary #{item.description}
+                .row.align-bottom
+                    .col
+                        p.price.text-center.text_primary.fs-4.mb-2 #{item.price}<span> грн.</span> 
+                    .col
+                        a(href="#").position-relative.zamovity замовити
+mixin stared ()
+    svg(width="60" height="60" viewbox="0 0 60 60").s_t
+        polygon(
+        points="0 0, 60 0 , 0 60" fill="#26cb15")
+        polygon(
+        fill="#fff" points="19.9, 6.1, 13.3, 26.78, 29.8, 13.58, 10, 13.58, 26.5, 26.78")
