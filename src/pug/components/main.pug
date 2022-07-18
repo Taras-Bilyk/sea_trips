@@ -1,22 +1,23 @@
 main(id="main").pt-5.pb-5
     .container
         .row
-            .col-12.col-lg-3.m-1.mt-0.mb-0.about
-                p.text-uppercase.fs-2 про нашу компанію
-                p.fst-italic.pb-3 Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+            .col-12.col-xl-3.m-1.mt-0.mb-0.about
+                p.text-uppercase.fs-2.text_dark про нашу компанію
+                p.fst-italic.pb-3.text_dark Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
                 p.pb-1
                     a(href="#").text-center.d-inline-block.text-white.mx-auto.btn.btn-warning.yellow_btn.text-uppercase детальніше
-                p.text-secondary * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                p.text_x_secondary * - зверніть увагу, зміна ціни може залежати від курсу долара.
             .col.cards_col
-                .row
-                    .col-12.col-sm-4.m-0.mt-0.mb-0.main_card_col.pt-4.position-relative
-                        +card(cards.bike)
-                    .col-12.col-sm-4.m-0.mt-0.mb-0.main_card_col.pt-4.position-relative
-                        +stared()
-                        +card(cards.trip)
-                    .col-12.col-sm-4.m-0.mt-0.mb-0.main_card_col.pt-4.position-relative
-                        +stared()
-                        +card(cards.exclusive)
+                .pl_160
+                    .row
+                        .col-12.col-lg-4.m-0.mt-0.mb-0.pt-0.position-relative
+                            +card(cards.bike)
+                        .col-12.col-lg-4.m-0.mt-0.mb-0.pt-0.position-relative
+                            +card(cards.trip)
+                            +stared_2()
+                        .col-12.col-lg-4.m-0.mt-0.mb-0.pt-0.position-relative
+                            +card(cards.exclusive)
+                            +stared_2()
                 .row
                     .col.text-center
                         a(href="#").position-relative.see_all_plans.text_primary дивитись усі плани
@@ -29,16 +30,16 @@ main(id="main").pt-5.pb-5
             .col
                 .row
                     .col
-                        p.text-uppercase.fs-2 Дивовижний безлюдний острів, який зводить людей з розуму
+                        p.text-uppercase.fs-2.text_dark Дивовижний безлюдний острів, який зводить людей з розуму
                 .row
                     .col-8
-                        p.fst-italic Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                        p.fst-italic.text_dark Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
                         p
                             a(href="#").text-center.d-inline-block.text-white.mx-auto.btn.btn-warning.yellow_btn.text-uppercase.mb-3.mb-sm-0 замовити тур
                             a(href="#").text-center.d-inline-block.mx-auto.btn.yellow_btn.text-uppercase.blue-button.text_primary детальніше
                     .col.island_price.text-center.pt-4.pb-4
                         p.text_primary.fs-3 575 грн./день
-                        p.text-secondary В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
+                        p.text_secondary В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
     .main_bgi.container-fluid
         .container
             .pt-4.pb-5
@@ -53,26 +54,26 @@ main(id="main").pt-5.pb-5
                             .pt-3.position-relative.main_col_2_div
                                 p.text-white.fst-italic Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи.
                                 p.text-white.text-center Олег Набережний
-                                p.text-secondary.text-center клієнт
+                                p.text_secondary.text-center клієнт
     .container
         .pt-5.pb-4
             .pt-4.pb-3
-                p.text-center.fs-1 Спеціальні пропозиції тижня
-                p.text-center.fst-italic Гарячі праозиції, по-швидше обирай і поїхали!
+                p.text-center.fs-1.text_dark Спеціальні пропозиції тижня
+                p.text-center.fst-italic.text_dark Гарячі праозиції, по-швидше обирай і поїхали!
         .row
-            .col
+            .col-12.col-lg-6.col-xxl-3
                 .trip_card_div.position-relative
                     +stared()
                     +trip_card(trip_cards.trip_to_2)
-            .col
+            .col-12.col-lg-6.col-xxl-3
                 .trip_card_div.position-relative.blue_rect_bike
                     +stared()
                     +trip_card(trip_cards.bike)
-            .col
+            .col-12.col-lg-6.col-xxl-3
                 .trip_card_div.position-relative
                     +stared()
                     +trip_card(trip_cards.on_island)
-            .col
+            .col-12.col-lg-6.col-xxl-3
                 .trip_card_div.position-relative
                     +stared()
                     +trip_card(trip_cards.serfing)
@@ -80,13 +81,13 @@ main(id="main").pt-5.pb-5
         .row
             .col-8.col-xl-3.offset-sm-2.offset-xl-0
                 .col_info.text-center.col_info_1
-                    p.fs-1.text-uppercase додаткова інформація
+                    p.fs-1.text-uppercase.text_dark додаткова інформація
             .col.m_cols
                 .col_info.col_info_2
                     .p-4
                         .right_text_p.position-relative
                             p.fs-4.text-white Графік роботи готелів.xls
-                            p.text-secondary Розмір файла: 10Mb
+                            p.text_x_secondary Розмір файла: 10Mb
                         p.text-white Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.
                         a(href="#").text-center.d-inline-block.mx-auto.btn.yellow_btn.text-uppercase.blue-button.text-primary.yellow_border_btn.position-relative скачати
             .col.m_cols
@@ -94,16 +95,16 @@ main(id="main").pt-5.pb-5
                     .p-4
                         .right_text_p.position-relative
                             p.fs-5.text-white Інформація про харчування.xls
-                            p.text-secondary Розмір файла: 10Mb
+                            p.text_x_secondary Розмір файла: 10Mb
                         p.text-white У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.
                         a(href="#").text-center.d-inline-block.mx-auto.btn.yellow_btn.text-uppercase.blue-button.text-primary.yellow_border_btn.position-relative скачати
 
             .col.offset-sm-3.offset-lg-0.mt-sm-5.mt-lg-0.m_cols
                 .col_info.text-center.col_info_4.position-relative
                     .position-relative.div_for_ellipse
-                        p.fs-4.pb-2 задати питання
-                        p.text-secondary.pb-3 Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
+                        p.fs-4.pb-2.text_dark задати питання
+                        p.text_secondary.pb-3 Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
                         p.pb-2
                             a(href="tel:+380505698511").text_primary.tel_a.position-relative +38 (050) 56 98 511
-                        p.mb-2 Анна Миколаївна
-                        p.text-secondary консультант
+                        p.mb-2.text_dark Анна Миколаївна
+                        p.text_secondary консультант

@@ -1,10 +1,20 @@
 @import components/mixin
 
+
+@font-face 
+    font-family: 'Rubik'
+    src: url('../fonts/Rubik-Regular.eot')
+    src: url('../fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Rubik-Regular.woff2') format('woff2'), url('../fonts/Rubik-Regular.woff') format('woff'), url('../fonts/Rubik-Regular.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+    font-display: swap
+
 body,
 html
     scroll-behavior: smooth
 body
     background-color: #f5f8fa
+    font-family: 'Rubik' !important
 header
     background-image: url(../img/header_background.jpg)
     // background-repeat: no-repeat
@@ -12,8 +22,33 @@ header
     background-position: center bottom
 hr
     border-color: #dfe3e6
+.text_dark
+    color: #333 !important
+.text_secondary
+    color: #999 !important
+.text_x_secondary
+    color: #bbb !important
 .text_primary
     color: #0099ff !important
+.w_270
+    width: 270px !important
+    +max-width(768)
+        width: 420px !important
+    +max-width(425)
+        width: 270px !important
+.pl_160
+    +max-width(768)
+        padding-left: 140px !important
+    +max-width(425)
+        padding-left: 0 !important
+    +max-width(320)
+        padding-left: 0 !important
+.fz_18
+    font-size: 18px !important
+.fz_23
+    font-size: 23px !important
+.tal
+    text-align: left !important
 .nav_a
     &:hover
         color: #ffcb3f !important
@@ -61,6 +96,9 @@ hr
 .yellow_btn
     border-radius: 30px
     padding: 10px 35px !important
+    &:hover
+        box-shadow: 0px 4px 10.5px rgba(193,139,1,0.24) !important
+        transform: lighten(#ffb700, 20)
 .header_a
     font-size: 14px
 .sea_p
@@ -125,6 +163,8 @@ hr
 .blue-button
     border-color: #0099ff
     margin-left: 10px !important
+    +max-width(425)
+        margin-left: 0 !important
     &:hover
         border-color: #ffb700
         color: #ffb700 !important
@@ -217,9 +257,28 @@ hr
         margin-left: 60px
     +max-width(320)
         margin-left: 15px
+    +max-width(1024)
+        width: 371px !important
+    +max-width(768)
+        margin-left: 160px
+    +max-width(425)
+        margin-left: 10px
+    +max-width(375)
+        margin-left: 20px !important
+        width: 290px !important
+    +max-width(320)
+        margin-left: 10px !important
+        width: 270px !important
     &:hover
         background-color: #fff
         box-shadow: 0px 4px 10.5px rgba(3,20,31,0.05)
+.trip_card_div_img
+    +max-width(1024)
+        width: 371px !important
+    +max-width(375)
+        width: 290px !important
+    +max-width(320)
+        width: 270px !important
 .zamovity
     text-decoration: none
     color: #ffb700
@@ -262,13 +321,13 @@ hr
     border-color: #ffb700
     color: #ffb700 !important
     margin-left: 0 !important
-    padding: 0 19px !important
+    padding: 4px 19px !important
     padding-left: 30px !important
     font-size: 12px !important
     &:before
         content: ""
         position: absolute
-        top: 3px
+        top: 7px
         left: 8px
         width: 16px
         height: 12px
@@ -340,6 +399,12 @@ hr
     left: 0
     width: 62px
     height: 62px
+.s_t_2
+    position: absolute
+    top: 0
+    left: 11px
+    width: 62px
+    height: 62px
 .blue_rect_bike
     &:before
         content: ""
@@ -370,6 +435,8 @@ hr
 .cards_col
     +max-width(425)
         margin: 0 50px
+    +max-width(320)
+        margin: 0 25px
 .m_cols
     +max-width(425)
         margin: 10px 50px

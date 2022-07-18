@@ -95,32 +95,39 @@ mixin menu (items)
         a(href=item.url).nav-link.text-white.nav_a.text-uppercase.header_a #{item.name}
 
 mixin card (item)
-    figure 
+    figure.pt-4.pb-4.w_270.main_card_col.position-relative.p-3
         figcaption
             .text-center.mb-4
                 picture
                     source(srcset=item.src + ".webp", type="image/webp")
                     img(src=item.src + ".png", alt=item.alt)
-            p.title-card.text-center.fs-5.mb-2 #{item.title}
+            p.title-card.text-center.fs-5.mb-2.text_dark #{item.title}
             p.price.text-center.text_primary.fs-3.mb-2 #{item.price}<span> грн.*</span> 
-            p.card-deskr.text-secondary #{item.description}
+            p.card-deskr.text_secondary #{item.description}
 
 mixin trip_card (item)
-    figure 
+    figure
         figcaption
             picture
-                source(srcset=item.src + ".webp", type="image/webp")
-                img(src=item.src + ".png", alt=item.alt)
+                source(srcset=item.src + ".webp", type="image/webp").trip_card_div_img
+                img(src=item.src + ".png", alt=item.alt).trip_card_div_img
             .p-3
-                p.fs-6.mb-2 #{item.title}
-                p.text-secondary #{item.description}
+                p.fs-6.mb-2.text_dark.fz_18 #{item.title}
+                p.text_secondary #{item.description}
                 .row.align-bottom
                     .col
-                        p.price.text-center.text_primary.fs-4.mb-2 #{item.price}<span> грн.</span> 
+                        p.price.text-center.text_primary.fs-4.mb-2.tal.fz_23 #{item.price}<span> грн.</span> 
                     .col
                         a(href="#").position-relative.zamovity замовити
 mixin stared ()
     svg(width="60" height="60" viewbox="0 0 60 60").s_t
+        polygon(
+        points="0 0, 60 0 , 0 60" fill="#26cb15")
+        polygon(
+        fill="#fff" points="19.9, 6.1, 13.3, 26.78, 29.8, 13.58, 10, 13.58, 26.5, 26.78")
+
+mixin stared_2 ()
+    svg(width="60" height="60" viewbox="0 0 60 60").s_t_2
         polygon(
         points="0 0, 60 0 , 0 60" fill="#26cb15")
         polygon(
