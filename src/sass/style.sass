@@ -19,7 +19,7 @@ header
     background-image: url(../img/header_background.jpg)
     // background-repeat: no-repeat
     background-size: cover
-    background-position: center bottom
+    background-position: center bottom -1px
 hr
     border-color: #dfe3e6
 .text_dark
@@ -177,6 +177,8 @@ hr
     background-position: center bottom
 .bg_col_1
     padding-right: 100px !important
+    +max-width(425)
+        padding-right: 0 !important
 .main_bgi_col_2
     &:before, &:after
         position: absolute
@@ -188,16 +190,16 @@ hr
         // height: 235px
         +max-width(1024)
             width: 150px
-            height: 320px
+            height: 300px
         +max-width(768)
             width: 80px
-            height: 370px
-        +max-width(425)
             height: 350px
+        +max-width(425)
+            height: 320px
         +max-width(375)
-            height: 370px
+            height: 350px
         +max-width(320)
-            height: 470px
+            height: 370px
             width: 50px
         +max-width(1399)
             height: 300px
@@ -225,7 +227,8 @@ hr
 .main_col_2_div
     padding-right: 50px
     +max-width(425)
-        padding-left: 50px
+        padding-left: 20px
+        padding-right: 20px
     &:before, &:after
         position: absolute
         content: ""
